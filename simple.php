@@ -16,4 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Main plugin function
 function simple_plugin_function() {
-    echo '<p>Hello, this
+    echo '<p>Hello, this is a simple plugin output!</p>';
+}
+
+// Hook into the 'wp_footer' action
+add_action( 'wp_footer', 'simple_plugin_function' );
